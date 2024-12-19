@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.scrollY > 100) {
       backToTopButton.style.display = "block";
     } else {
-      backToTopButton.style.display = "block";
+      backToTopButton.style.display = "none";
     }
   });
 
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "auto",
     });
   });
 });

@@ -14,8 +14,11 @@
     rel="stylesheet" />
 
   <link href="assets/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@your-library/accessibility.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@your-library/accessibility.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/function.js"></script>
+  <script src="assets/js/accessibility.js"></script>
 </head>
 
 <body>
@@ -28,8 +31,8 @@
           <div class="col-md-10  offset-md-2">
             <nav class="navbar">
               <div class="navbar-header">
-                <a class="navbar-brand">
-                  <img src="./Imagens/logoSanta.png" />
+                <a class="navbar-brand offset-md-6">
+                  <img src="./Imagens/logoSanta.png">
                 </a>
               </div>
               <div class="logo">
@@ -48,16 +51,357 @@
     </div>
   </header>
 
+
+
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
+  <section class="text-center">
+    <strong>Aqui e a pagina 1</strong>
+  </section>
   <section class="text-center">
     <strong>Aqui e a pagina 1</strong>
   </section>
 
 
 
-  <div class="text-center" id="footer">
+  <div class="text-center footer">
     <div class="footer-top">
       <div class="container">
-        <section>
+        <section id="container">
 
           <a
             data-mdb-ripple-init
@@ -88,12 +432,12 @@
             role="button">
             <i class="bi bi-whatsapp"></i>
           </a>
+        </section>
+        <section>
+          <div class="container">
+            <p>exemplo de footer</p>
 
-
-
-
-
-
+          </div>
         </section>
       </div>
     </div>
@@ -101,8 +445,23 @@
 
 
   <a href="#" class="back-to-top" title="Voltar ao topo">
-    <i class="bi bi-arrow-up-circle"></i>
+    <i class="bi bi-arrow-up-circle text-warning"></i>
   </a>
+
+  <!-- <div id="accessibility-menu">
+    <button id="accessibility-toggle" onclick="toggleAccessibilityMenu()">
+      Acessibilidade
+    </button>
+
+    <div id="accessibility-options" class="hidden">
+      <button onclick="increaseFontSize()">A+</button>
+      <button onclick="decreaseFontSize()">A-</button>
+      <button onclick="toggleHighContrast()">Contraste</button>
+      <button onclick="toggleGrayscale()">Escala de Cinza</button>
+      <button onclick="toggleLightBackground()">Fundo Claro</button>
+      <button onclick="toggleFont()">Alterar Fonte</button>
+    </div>
+  </div> -->
 
 
   <div vw class="enabled">
