@@ -3,17 +3,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", function () {
     if (window.scrollY > 100) {
-      backToTopButton.style.display = "block";
+      backToTopButton.classList.add("show");
     } else {
-      backToTopButton.style.display = "none";
+      backToTopButton.classList.remove("show");
     }
   });
 
   backToTopButton.addEventListener("click", function (e) {
     e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "auto",
-    });
+
+    const scrollToTop = () => {
+      const c = document.documentElement.scrollTop || document.body.scrollTop;
+      if (c > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, c - c / 8);
+      }
+    };
+
+    scrollToTop();
   });
 });

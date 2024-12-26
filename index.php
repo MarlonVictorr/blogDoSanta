@@ -448,21 +448,21 @@
     <i class="bi bi-arrow-up-circle text-warning"></i>
   </a>
 
-  <!-- <div id="accessibility-menu">
-    <button id="accessibility-toggle" onclick="toggleAccessibilityMenu()">
-      Acessibilidade
-    </button>
 
-    <div id="accessibility-options" class="hidden">
-      <button onclick="increaseFontSize()">A+</button>
-      <button onclick="decreaseFontSize()">A-</button>
-      <button onclick="toggleHighContrast()">Contraste</button>
-      <button onclick="toggleGrayscale()">Escala de Cinza</button>
-      <button onclick="toggleLightBackground()">Fundo Claro</button>
-      <button onclick="toggleFont()">Alterar Fonte</button>
-    </div>
-  </div> -->
+  <p class="menuAcessibilidade">
+    <a class="btn btn-primary " data-bs-toggle="collapse" href="#collapseAcessibilidade" role="button" aria-expanded="false" aria-controls="collapseExample">
+      <i class="bi bi-universal-access-circle"></i>
+    </a>
 
+  </p>
+  <div class="active collapse menu" id="collapseAcessibilidade">
+    <button onclick="increaseFontSize()">A+</button>
+    <button onclick="decreaseFontSize()">A-</button>
+    <button onclick="toggleHighContrast()">Contraste</button>
+    <button onclick="toggleGrayscale()">Escala de Cinza</button>
+    <button onclick="toggleLightBackground()">Fundo Claro</button>
+    <button onclick="toggleFont()">Alterar Fonte</button>
+  </div>
 
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
