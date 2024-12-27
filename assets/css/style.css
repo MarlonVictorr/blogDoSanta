@@ -112,10 +112,6 @@ body.high-contrast {
   color: #fff;
 }
 
-body.grayscale {
-  filter: grayscale(100%);
-}
-
 body.light-background {
   background-color: #f4f4f4;
   color: #333;
@@ -154,8 +150,12 @@ body.custom-font {
 
 .menuAcessibilidade {
   position: fixed;
-  bottom: 20px;
-  right: 10px;
+  bottom: 80px;
+  right: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   z-index: 1000;
   height: 300px;
 }
