@@ -433,12 +433,33 @@
             <i class="bi bi-whatsapp"></i>
           </a>
         </section>
-        <section>
+        <footer class="footerInfo mt-2">
           <div class="container">
-            <p>exemplo de footer</p>
+            <div class="row">
 
+              <div class="col-md-6">
+                <h5 class="offset-md-4">Sobre Mim</h5>
+                <p class="offset-md-4">
+                  Cuiabano de chapa e cruz, Filho da Terra com Italiano. Pai. Advogado. Técnico do TCE/MT. Aposentado por invalidez. Surdo, Deficiente Físico. Cidadão. Povo.
+                </p>
+              </div>
+
+              <div class="col-md-6">
+                <h5 class="offset-inner">Contato</h5>
+                <p>
+                  <i class="bi bi-envelope emailIcon"></i>
+                  <a href="https://mail.google.com/mail" target="_blank">bloguedosanta@gmail.com</a>
+                  <br>
+                  <i class="bi bi-telephone telefoneIcon"></i> (65) 9 9972-4951
+                </p>
+              </div>
+            </div>
           </div>
-        </section>
+          <div>
+            <p><b>©</b> 2025 Santalucia, Paulo</p>
+          </div>
+        </footer>
+
       </div>
     </div>
   </div>

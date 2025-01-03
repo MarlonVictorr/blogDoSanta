@@ -1,7 +1,6 @@
 #header {
   position: relative;
-  top: 0;
-  z-index: 1000;
+
   transition: all 0.3s ease-in-out;
   background: linear-gradient(
     to right,
@@ -158,4 +157,29 @@ body.custom-font {
   gap: 10px;
   z-index: 1000;
   height: 300px;
+}
+
+.emailIcon {
+  color: #ea4335;
+}
+
+.telefoneIcon {
+  color: #34a853;
+}
+
+p a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footerInfo {
+  position: absolute;
+  background: linear-gradient(
+    to right,
+    rgb(253, 253, 253) 5%,
+    rgba(183, 202, 6, 0.2) 15%,
+    rgba(183, 202, 6, 0.2) 85%,
+    rgb(253, 253, 253) 100%
+  );
+  padding: 10px;
 }
