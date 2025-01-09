@@ -53,9 +53,64 @@
 
 
 
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
+  <div id="carouselExampleControls" class="carousel slide featured-section" data-bs-ride="carousel">
+    <div class="carousel-inner featured-container">
+      <div class="carousel-item active">
+        <div class="post-slide">
+          <div class="post-image">
+            <img src="/api/placeholder/800/400" alt="Imagem sobre acessibilidade digital">
+          </div>
+          <div class="post-details">
+            <span class="category-tag">Acessibilidade</span>
+            <h2 class="post-title">A Importância da Acessibilidade Digital</h2>
+            <p class="post-excerpt">Como tornar a internet mais inclusiva para todos os usuários. Descubra práticas e ferramentas para melhorar a acessibilidade do seu site.</p>
+            <a href="#" class="read-more offset-md-4">Ler mais</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="carousel-item">
+        <div class="post-slide">
+          <div class="post-image">
+            <img src="/api/placeholder/800/400" alt="Imagem sobre cultura cuiabana">
+          </div>
+          <div class="post-details">
+            <span class="category-tag">Cultura</span>
+            <h2 class="post-title">Cultura Cuiabana: Tradições e Modernidade</h2>
+            <p class="post-excerpt">Um olhar sobre as transformações culturais de Cuiabá e como as tradições se mantêm vivas na era moderna.</p>
+            <a href="#" class="read-more offset-md-4">Ler mais</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="carousel-item">
+        <div class="post-slide">
+          <div class="post-image">
+            <img src="/api/placeholder/800/400" alt="Imagem sobre espiritualidade">
+          </div>
+          <div class="post-details">
+            <span class="category-tag">Espiritualidade</span>
+            <h2 class="post-title">Reflexões Sobre Espiritualidade</h2>
+            <p class="post-excerpt">A busca pelo equilíbrio espiritual na vida contemporânea e como encontrar paz interior em meio ao caos.</p>
+            <a href="#" class="read-more offset-md-4">Ler mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+
+
   <section class="text-center">
     <strong>Aqui e a pagina 1</strong>
   </section>
