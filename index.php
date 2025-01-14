@@ -31,7 +31,7 @@
           <div class="col-md-10  offset-md-2">
             <nav class="navbar">
               <div class="navbar-header">
-                <a class="navbar-brand offset-md-6">
+                <a class="navbar-brand offset-md-6" href="index.php">
                   <img src="./Imagens/logoSanta.png">
                 </a>
               </div>
@@ -42,6 +42,7 @@
                   <li><a href="acessibilidade.php">Acessibilidade</a></li>
                   <li><a href="cultura.php">Cultura</a></li>
                   <li><a href="espiritualidade.php">Espiritualidade</a></li>
+                  <li><a data-bs-toggle="modal" data-bs-target="#modalSanta"><i class="bi bi-lock"></i></a></li>
                 </ul>
               </div>
             </nav>
@@ -58,7 +59,7 @@
       <div class="carousel-item active">
         <div class="post-slide">
           <div class="post-image">
-            <img src="/api/placeholder/800/400" alt="Imagem sobre acessibilidade digital">
+            <img src="./Imagens/blogPaulinho.png" alt="Imagem sobre acessibilidade digital">
           </div>
           <div class="post-details">
             <span class="category-tag">Acessibilidade</span>
@@ -72,7 +73,7 @@
       <div class="carousel-item">
         <div class="post-slide">
           <div class="post-image">
-            <img src="/api/placeholder/800/400" alt="Imagem sobre cultura cuiabana">
+            <img src="./Imagens/logoPaulinho.png" alt="Imagem sobre cultura cuiabana">
           </div>
           <div class="post-details">
             <span class="category-tag">Cultura</span>
@@ -86,7 +87,7 @@
       <div class="carousel-item">
         <div class="post-slide">
           <div class="post-image">
-            <img src="/api/placeholder/800/400" alt="Imagem sobre espiritualidade">
+            <img src="./Imagens/logoSanta.png" alt="Imagem sobre espiritualidade">
           </div>
           <div class="post-details">
             <span class="category-tag">Espiritualidade</span>
@@ -107,349 +108,41 @@
     </button>
   </div>
 
+  <div class="modal fade" id="modalSanta" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="labelHeader" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modalBlog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="labelHeader">Login</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="UsuarioInput" class="form-label">Usuário:</label>
+              <input type="text" id="UsuarioInput" class="form-control" placeholder="Digite seu usuário">
+            </div>
+            <div class="col-md-6 position-relative">
+              <label for="senhaInput" class="form-label">Senha:</label>
+              <div class="input-group">
+                <input type="password" id="senhaInput" class="form-control" placeholder="Digite sua senha">
+                <button type="button" class="btn" id="toggleSenha">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal" onclick="logar()">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
 
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
-  <section class="text-center">
-    <strong>Aqui e a pagina 1</strong>
-  </section>
 
 
 
@@ -462,7 +155,7 @@
             data-mdb-ripple-init
             class="btn text-white btn-floating m-3"
             style="background-color: #e1306c"
-            href="https://www.instagram.com/your-instagram-page"
+            href="https://www.instagram.com/bloguedosanta/"
             target="_blank"
             role="button">
             <i class="bi bi-instagram"></i>
@@ -472,7 +165,7 @@
             data-mdb-ripple-init
             class="btn text-white btn-floating m-3"
             style="background-color: #1877f2"
-            href="https://www.facebook.com/your-facebook-page"
+            href="https://www.facebook.com/profile.php?id=61571906819347"
             target="_blank"
             role="button">
             <i class="bi bi-facebook"></i>

@@ -27,8 +27,8 @@
                     <div class="col-md-10  offset-md-2">
                         <nav class="navbar">
                             <div class="navbar-header">
-                                <a class="navbar-brand">
-                                    <img src="./Imagens/logoSanta.png" />
+                                <a class="navbar-brand offset-md-6" href="index.php">
+                                    <img src="./Imagens/logoSanta.png">
                                 </a>
                             </div>
                             <div class="logo">
