@@ -1,5 +1,107 @@
+html,
 body {
+  height: 100%;
+  margin: 0;
   font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.footerInfo {
+  background: linear-gradient(
+    to right,
+    rgb(253, 253, 253) 5%,
+    rgb(238, 255, 1) 20%,
+    rgba(238, 255, 1) 70%,
+    rgb(253, 253, 253) 100%
+  );
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    margin-left: 50%;
+  }
+
+  #carouselExampleControls a {
+    margin-left: 100px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo li {
+    margin: 5px 2;
+  }
+
+  .navbar-brand img {
+    width: 150px;
+  }
+
+  .navbar a {
+    padding: 5px 15px;
+  }
+
+  .col-md-10.offset-md-2 {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .footerInfo .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footerInfo .offset-md-4 {
+    margin-left: 0;
+  }
+
+  .col-md-6 {
+    padding: 10px 15px;
+  }
+
+  #container {
+    display: block;
+  }
+
+  .footerInfo .offset-md-4,
+  .footerInfo .offset-inner {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .footerInfo .row > div {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer .footer-top .container section {
+    display: flex;
+
+    gap: 10px;
+  }
+
+  .footer .footer-top .container section a {
+    margin: 20px 5px;
+  }
 }
 
 #header {
@@ -176,7 +278,6 @@ p a {
 }
 
 .footerInfo {
-  position: absolute;
   background: linear-gradient(
     to right,
     rgb(253, 253, 253) 5%,

@@ -37,7 +37,11 @@ function logar() {
       alert("Logado com sucesso");
     }
   };
-  xhttp.open("GET", "executar/login/login.php", true);
+  xhttp.open(
+    "GET",
+    "executar/login/login.php?usuario=" + usuario + "&senha=" + senha,
+    true
+  );
   xhttp.send();
 }
 
