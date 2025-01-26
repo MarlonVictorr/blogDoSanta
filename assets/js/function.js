@@ -25,16 +25,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function logar() {
-  usuario = document.getElementById("UsuarioInput").value;
-  senha = document.getElementById("senhaInput").value;
+  let usuario = document.getElementById("UsuarioInput").value;
+  let senha = document.getElementById("senhaInput").value;
 
   if (usuario == "" || senha == "") {
     alert("Preencha os campos");
+    return;
   }
+
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      alert("Logado com sucesso");
+      if (this.responseText.trim() === "success") {
+        alert("Logado com sucesso");
+        window.location.href = "index.php";
+      } else {
+        alert("Usuário ou senha incorretos");
+      }
     }
   };
   xhttp.open(
@@ -63,3 +70,45 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+function salvarPost() {
+  titulo = document.getElementById("tituloPost").value;
+  citacoes = document.getElementById("citacoesPost").value;
+  imagem = document.getElementById("imagemPost").value;
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      if (this.responseText.trim() === "success") {
+        swal({
+          title: "Sucesso",
+          text: "Salvo com sucesso",
+          icon: "success",
+          timer: 3000,
+          buttons: false,
+        }).then(() => {
+          window.location.href = "index.php";
+        });
+      } else {
+        swal({
+          title: "Tente novamente",
+          text: "Erro ao salvar",
+          icon: "error",
+          timer: 3000,
+          buttons: false,
+        });
+      }
+    }
+  };
+  xhttp.open(
+    "GET",
+    "executar/salvar/createPost.php?titulo=" +
+      titulo +
+      "&citacoes=" +
+      citacoes +
+      "&imagem=" +
+      imagem,
+    true
+  );
+  xhttp.send();
+}

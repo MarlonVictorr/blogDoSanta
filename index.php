@@ -1,3 +1,12 @@
+<?php
+$page = 1;
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +28,7 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/function.js"></script>
   <script src="assets/js/accessibility.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -138,6 +148,39 @@
     </div>
   </div>
 
+  <div class="modal fade" id="modalPost" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="labelHeader" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modalBlog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="labelHeader">Novo Post</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-12">
+              <label for="UsuarioInput" class="form-label">Titulo: <span class="text-danger">*</span></label>
+              <input type="text" id="tituloPost" class="form-control" placeholder="Digite o Titulo">
+            </div>
+            <div class="col-md-12">
+              <label for="citacoes" class="form-label">Citações:</label>
+              <input type="text" id="citacoesPost" class="form-control" placeholder="Citações">
+            </div>
+            <div class="col-md-12">
+              <label class="form-label">Adicionar Imagem: <span class="text-danger">*</span></label>
+              <div class="input-group">
+                <input type="file" class="form-control" id="imagemPost" accept="image/*" placeholder="Clique para adicionar uma imagem">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal" onclick="salvarPost()">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
 
@@ -178,8 +221,14 @@
             role="button">
             <i class="bi bi-whatsapp"></i>
           </a>
+          <a data-mdb-ripple-init
+            class="btn btn-floating m-3"
+            style="background-color:rgb(10, 10, 10)"
+            role="button" data-bs-toggle="modal" data-bs-target="#modalPost">
+            <i class="bi bi-plus-lg text-white"></i>
+          </a>
         </section>
-        <footer class="footerInfo mt-2">
+        <footer class="footerInfo">
           <div class="container">
             <div class="row">
 
