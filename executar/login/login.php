@@ -1,6 +1,6 @@
 <?php
 include('../../data/conn.php');
-
+session_start();
 
 $usuario = $_GET['usuario'];
 $senha = $_GET['senha'];
@@ -8,7 +8,8 @@ $senha = $_GET['senha'];
 
 $resultado = verificarUsuario($usuario, $senha);
 
-if (mysqli_num_rows($resultado) > 0) {
+if ($resultado) {
+    $_SESSION['id'] = $resultado;
     echo "success";
 } else {
     echo "error";

@@ -1,34 +1,48 @@
 <?php
-function conn($sql)
+function conn()
 {
     $host = "localhost";
     $usuario = "root";
     $senha = "";
     $bd = "bd_blog_santa";
 
-    $mysqli = new mysqli($host, $usuario, $senha, $bd);
+    $conn = new mysqli($host, $usuario, $senha, $bd);
 
-    $sql = mysqli_query($mysqli, $sql);
+    if ($conn->connect_error) {
+        die("Falha na conexão: " . $conn->connect_error);
+    }
 
-    return $sql;
+    return $conn;
 }
-
-
 
 function verificarUsuario($usuario, $senha)
 {
-    $sql = "SELECT * FROM usuario where nome = '$usuario' and senha = '$senha'";
+    $sql = "SELECT id FROM usuario WHERE nome = '$usuario' AND senha = '$senha'";
 
-    $sql = conn($sql);
+    $conn = conn();
 
-    return $sql;
+    $result = mysqli_query($conn, $sql);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        return $row['id'];
+    }
+
+    return false;
 }
 
-function salvarPost($titulo, $citacoes, $imagem)
+
+function salvarPost($titulo, $citacoes)
 {
-    $sql = "INSERT INTO post(titulo, citacoes, imagem) VALUES ('$titulo',' $citacoes','$imagem')";
+    $sql = "INSERT INTO post (titulo, citacoes) VALUES ('$titulo', '$citacoes')";
 
-    $sql = conn($sql);
+    $conn = conn();
 
-    return $sql;
+    $result = mysqli_query($conn, $sql);
+
+    if (!$result) {
+        die("Erro ao inserir o post: " . mysqli_error($conn));
+    }
+
+    return true;
 }

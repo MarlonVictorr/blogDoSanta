@@ -6,7 +6,7 @@ $citacoes = $_GET['citacoes'];
 $imagem = $_GET['imagem'];
 
 
-$sql = salvarPost($titulo, $citacoes, $imagem);
+$sql = salvarPost($titulo, $citacoes);
 
 
 if (mysqli_num_rows($resultado) > 0) {

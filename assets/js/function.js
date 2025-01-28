@@ -29,18 +29,38 @@ function logar() {
   let senha = document.getElementById("senhaInput").value;
 
   if (usuario == "" || senha == "") {
-    alert("Preencha os campos");
+    swal({
+      title: "Atenção!",
+      text: "Preencha e tente novamente",
+      icon: "warning",
+      timer: 3000,
+      buttons: false,
+    });
     return;
   }
 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
+      console.log(this.responseText);
       if (this.responseText.trim() === "success") {
-        alert("Logado com sucesso");
-        window.location.href = "index.php";
+        swal({
+          title: "Sucesso",
+          text: "Logado com sucesso",
+          icon: "success",
+          timer: 3000,
+          buttons: false,
+        }).then(() => {
+          window.location.href = "index.php";
+        });
       } else {
-        alert("Usuário ou senha incorretos");
+        swal({
+          title: "Tente novamente",
+          text: "Erro ao logar",
+          icon: "error",
+          timer: 3000,
+          buttons: false,
+        });
       }
     }
   };
@@ -102,12 +122,7 @@ function salvarPost() {
   };
   xhttp.open(
     "GET",
-    "executar/salvar/createPost.php?titulo=" +
-      titulo +
-      "&citacoes=" +
-      citacoes +
-      "&imagem=" +
-      imagem,
+    "executar/salvar/createPost.php?titulo=" + titulo + "&citacoes=" + citacoes,
     true
   );
   xhttp.send();

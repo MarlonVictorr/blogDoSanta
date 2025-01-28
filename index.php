@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $page = 1;
 
 
@@ -52,7 +54,14 @@ $page = 1;
                   <li><a href="acessibilidade.php">Acessibilidade</a></li>
                   <li><a href="cultura.php">Cultura</a></li>
                   <li><a href="espiritualidade.php">Espiritualidade</a></li>
-                  <li><a data-bs-toggle="modal" data-bs-target="#modalSanta"><i class="bi bi-lock"></i></a></li>
+                  <?php
+                  if (isset($_SESSION['id'])) {
+                    echo ' <li><a href="logoff.php"><i class="bi bi-door-closed"></i></a></li>';
+                  } else {
+                    echo ' <li><a data-bs-toggle="modal" data-bs-target="#modalSanta"><i class="bi bi-lock"></i></a></li>';
+                  }
+                  ?>
+
                 </ul>
               </div>
             </nav>
@@ -221,12 +230,21 @@ $page = 1;
             role="button">
             <i class="bi bi-whatsapp"></i>
           </a>
-          <a data-mdb-ripple-init
-            class="btn btn-floating m-3"
-            style="background-color:rgb(10, 10, 10)"
-            role="button" data-bs-toggle="modal" data-bs-target="#modalPost">
-            <i class="bi bi-plus-lg text-white"></i>
-          </a>
+
+          <?php
+          if (isset($_SESSION['id'])) {
+            echo '<a data-mdb-ripple-init
+        class="btn btn-floating m-3"
+        style="background-color:rgb(10, 10, 10)"
+        role="button" data-bs-toggle="modal" data-bs-target="#modalPost">
+        <i class="bi bi-plus-lg text-white"></i>
+    </a>';
+          }
+          ?>
+
+
+
+
         </section>
         <footer class="footerInfo">
           <div class="container">
