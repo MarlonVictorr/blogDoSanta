@@ -32,17 +32,60 @@ function verificarUsuario($usuario, $senha)
 }
 
 
-function salvarPost($titulo, $citacoes)
+function salvarPost($titulo, $citacoes, $descricao, $page)
 {
-    $sql = "INSERT INTO post (titulo, citacoes) VALUES ('$titulo', '$citacoes')";
-
     $conn = conn();
+
+    $sql = "INSERT INTO post (titulo, citacoes,descricao,page) VALUES ('$titulo', '$citacoes','$descricao',$page)";
 
     $result = mysqli_query($conn, $sql);
 
-    if (!$result) {
-        die("Erro ao inserir o post: " . mysqli_error($conn));
+    if ($result) {
+        return mysqli_insert_id($conn);
     }
 
-    return true;
+    return false;
+}
+
+function insertImg($nomeArquivo, $extensao, $idPage, $idPost)
+{
+    $conn = conn();
+
+    $sql = "INSERT INTO imagem(descricao, ext, idPost, idPage) VALUES ('$nomeArquivo','$extensao',$idPost,$idPage)";
+
+    return mysqli_query($conn, $sql);
+}
+
+function dadosPost($page)
+{
+    $conn = conn();
+
+    $sql = "SELECT * FROM post WHERE page = $page";
+
+    $result = mysqli_query($conn, $sql);
+
+    return $result;
+}
+
+function dadosImagem($idPost, $page)
+{
+    $conn = conn();
+
+    $sql = "SELECT * FROM imagem WHERE idPost = $idPost and idPage = $page";
+
+    $result = mysqli_query($conn, $sql);
+
+    return $result;
+}
+
+
+function excluirPost($idPost)
+{
+    $conn = conn();
+
+    $sql = "DELETE FROM post WHERE id = $idPost";
+
+    $result = mysqli_query($conn, $sql);
+
+    return $result;
 }

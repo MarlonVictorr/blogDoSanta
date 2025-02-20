@@ -3,14 +3,13 @@ include('../../data/conn.php');
 
 $titulo = $_GET['titulo'];
 $citacoes = $_GET['citacoes'];
-$imagem = $_GET['imagem'];
+$descricao = $_GET['descricao'];
+$page = $_GET['page'];
 
+$idPost = salvarPost($titulo, $citacoes, $descricao, $page);
 
-$sql = salvarPost($titulo, $citacoes);
-
-
-if (mysqli_num_rows($resultado) > 0) {
-    echo "success";
+if ($idPost) {
+    echo $idPost;
 } else {
     echo "error";
 }

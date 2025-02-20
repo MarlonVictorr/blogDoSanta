@@ -24,6 +24,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+function scrollToPosts() {
+  const section = document.getElementById("postsSection");
+  if (section) {
+    window.scrollTo({
+      top: section.offsetTop - 50, // Ajuste para garantir que fique visível
+      behavior: "smooth",
+    });
+  }
+}
+
 function logar() {
   let usuario = document.getElementById("UsuarioInput").value;
   let senha = document.getElementById("senhaInput").value;
@@ -91,24 +101,93 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-function salvarPost() {
-  titulo = document.getElementById("tituloPost").value;
-  citacoes = document.getElementById("citacoesPost").value;
-  imagem = document.getElementById("imagemPost").value;
+function salvarImagem(imagem, page, response) {
+  if (!imagem || !imagem.files || imagem.files.length === 0) {
+    swal({
+      title: "Tente novamente",
+      text: "Nenhuma imagem foi selecionada!",
+      icon: "error",
+      timer: 3000,
+      buttons: false,
+    });
+    return;
+  }
+
+  var file = imagem.files[0];
+  var formData = new FormData();
+  formData.append("imagem", file);
+  formData.append("idPage", page);
+  formData.append("idPost", response);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "executar/salvar/upload_img.php", true);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        try {
+          var resposta = JSON.parse(xhr.responseText);
+          swal({
+            title: resposta.title,
+            text: resposta.msg,
+            icon: resposta.icon,
+            timer: 3000,
+            buttons: false,
+          });
+        } catch (error) {
+          console.error("Erro ao processar JSON: ", error);
+        }
+      } else {
+        swal({
+          title: "Erro!",
+          text: "Falha ao enviar a imagem. Código HTTP: " + xhr.status,
+          icon: "error",
+          timer: 3000,
+          buttons: false,
+        });
+      }
+    }
+  };
+
+  xhr.send(formData);
+}
+
+function salvarPost(page) {
+  let titulo = document.getElementById("tituloPost").value;
+  let citacoes = document.getElementById("citacoesPost").value;
+  let descricao = document.getElementById("descricaoPost").value;
+  let imagemInput = document.getElementById("imagemPost");
 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      if (this.responseText.trim() === "success") {
+      let response = this.responseText.trim();
+      if (response !== "error") {
         swal({
           title: "Sucesso",
           text: "Salvo com sucesso",
           icon: "success",
           timer: 3000,
           buttons: false,
-        }).then(() => {
-          window.location.href = "index.php";
         });
+
+        setTimeout(() => {
+          if (page == 1) {
+            window.location.href = "index.php";
+          } else if (page == 2) {
+            window.location.href = "opiniao.php";
+          } else if (page == 3) {
+            window.location.href = "artigo.php";
+          } else if (page == 4) {
+            window.location.href = "acessibilidade.php";
+          } else if (page == 5) {
+            window.location.href = "cultura.php";
+          } else if (page == 6) {
+            window.location.href = "espiritualidade.php";
+          }
+        }, 3000);
+
+        salvarImagem(imagemInput, page, response);
       } else {
         swal({
           title: "Tente novamente",
@@ -120,10 +199,62 @@ function salvarPost() {
       }
     }
   };
+
   xhttp.open(
     "GET",
-    "executar/salvar/createPost.php?titulo=" + titulo + "&citacoes=" + citacoes,
+    "executar/salvar/createPost.php?titulo=" +
+      encodeURIComponent(titulo) +
+      "&citacoes=" +
+      encodeURIComponent(citacoes) +
+      "&descricao=" +
+      encodeURIComponent(descricao) +
+      "&page=" +
+      encodeURIComponent(page),
     true
   );
+  xhttp.send();
+}
+
+function excluirPost(idPost, page) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(this.responseText);
+      if (this.responseText.trim() === "success") {
+        swal({
+          title: "Sucesso",
+          text: "Excluido com sucesso",
+          icon: "success",
+          timer: 3000,
+          buttons: false,
+        }).then(() => {
+          setTimeout(() => {
+            if (page == 1) {
+              window.location.href = "index.php";
+            } else if (page == 2) {
+              window.location.href = "opiniao.php";
+            } else if (page == 3) {
+              window.location.href = "artigo.php";
+            } else if (page == 4) {
+              window.location.href = "acessibilidade.php";
+            } else if (page == 5) {
+              window.location.href = "cultura.php";
+            } else if (page == 6) {
+              window.location.href = "espiritualidade.php";
+            }
+          }, 3000);
+        });
+      } else {
+        swal({
+          title: "Tente novamente",
+          text: "Erro ao excluir",
+          icon: "error",
+          timer: 3000,
+          buttons: false,
+        });
+      }
+    }
+  };
+  xhttp.open("GET", "executar/excluir/excluirPost.php?idPost=" + idPost, true);
   xhttp.send();
 }

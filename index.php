@@ -1,8 +1,10 @@
 <?php
+
+include('./data/conn.php');
+
 session_start();
 
 $page = 1;
-
 
 ?>
 
@@ -54,6 +56,7 @@ $page = 1;
                   <li><a href="acessibilidade.php">Acessibilidade</a></li>
                   <li><a href="cultura.php">Cultura</a></li>
                   <li><a href="espiritualidade.php">Espiritualidade</a></li>
+
                   <?php
                   if (isset($_SESSION['id'])) {
                     echo ' <li><a href="logoff.php"><i class="bi bi-door-closed"></i></a></li>';
@@ -78,13 +81,13 @@ $page = 1;
       <div class="carousel-item active">
         <div class="post-slide">
           <div class="post-image">
-            <img src="./Imagens/blogPaulinho.png" alt="Imagem sobre acessibilidade digital">
+            <img src="./Imagens/acessibilidadeDestaque.png" alt="Imagem sobre acessibilidade digital">
           </div>
           <div class="post-details">
             <span class="category-tag">Acessibilidade</span>
             <h2 class="post-title">A Importância da Acessibilidade Digital</h2>
             <p class="post-excerpt">Como tornar a internet mais inclusiva para todos os usuários. Descubra práticas e ferramentas para melhorar a acessibilidade do seu site.</p>
-            <a href="#" class="read-more offset-md-4">Ler mais</a>
+            <a href="#" class="read-more offset-md-4" onclick="scrollToPosts(); return false;">Ler mais</a>
           </div>
         </div>
 
@@ -92,13 +95,13 @@ $page = 1;
       <div class="carousel-item">
         <div class="post-slide">
           <div class="post-image">
-            <img src="./Imagens/logoPaulinho.png" alt="Imagem sobre cultura cuiabana">
+            <img src="./Imagens/culturaDestaque.png" alt="Imagem sobre cultura cuiabana">
           </div>
           <div class="post-details">
             <span class="category-tag">Cultura</span>
             <h2 class="post-title">Cultura Cuiabana: Tradições e Modernidade</h2>
             <p class="post-excerpt">Um olhar sobre as transformações culturais de Cuiabá e como as tradições se mantêm vivas na era moderna.</p>
-            <a href="#" class="read-more offset-md-4">Ler mais</a>
+            <a href="#" class="read-more offset-md-4" onclick="scrollToPosts(); return false;">Ler mais</a>
           </div>
         </div>
 
@@ -106,13 +109,13 @@ $page = 1;
       <div class="carousel-item">
         <div class="post-slide">
           <div class="post-image">
-            <img src="./Imagens/logoSanta.png" alt="Imagem sobre espiritualidade">
+            <img src="./Imagens/espiritualidadeDestaque.png" alt="Imagem sobre espiritualidade">
           </div>
           <div class="post-details">
             <span class="category-tag">Espiritualidade</span>
             <h2 class="post-title">Reflexões Sobre Espiritualidade</h2>
             <p class="post-excerpt">A busca pelo equilíbrio espiritual na vida contemporânea e como encontrar paz interior em meio ao caos.</p>
-            <a href="#" class="read-more offset-md-4">Ler mais</a>
+            <a href="#" class="read-more offset-md-4" onclick="scrollToPosts(); return false;">Ler mais</a>
           </div>
         </div>
       </div>
@@ -124,6 +127,67 @@ $page = 1;
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
     </button>
   </div>
+
+  <?php
+  $dados = dadosPost($page);
+
+  if (mysqli_num_rows($dados) > 0) {
+    echo '<section id="postsSection" class="featured-section">';
+    echo '<div class="featured-container">';
+
+    while ($row = mysqli_fetch_assoc($dados)) {
+      $idPost = $row['id'];
+      $titulo = strtoupper($row['titulo']);
+      $descricao = $row['descricao'];
+      $citacoes = $row['citacoes'];
+      $date_post = date("d/m/Y H:i:s", strtotime($row['date_post']));
+
+
+      $dadosImagem = dadosImagem($idPost, $page);
+      $imagemTag = '';
+      while ($imgRow = mysqli_fetch_array($dadosImagem)) {
+        $descricaoImagem = $imgRow['descricao'];
+        $ext = $imgRow['ext'];
+
+
+        $caminhoImagem = "Imagens/$descricaoImagem.$ext";
+        if (file_exists($caminhoImagem)) {
+          $imagemTag .= "<img class='w-100' src='$caminhoImagem' alt='$titulo'>";
+        }
+      }
+
+
+      $postClass = empty($imagemTag) ? 'no-image' : '';
+
+      echo "
+      <div class='post-slide $postClass'>
+          " . (!empty($imagemTag) ? "<div class='post-image'>$imagemTag</div>" : "") . "
+          <div class='post-details'>
+              <h2 class='post-title '>$titulo</h2>
+              <span class='category-tag'> BY /  $citacoes $date_post</span>
+              <p class='post-excerpt'>$descricao</p>
+          </div>";
+
+      if (isset($_SESSION['id'])) {
+        echo "
+              <div class='post-actions'>
+                  <a href='#!' class='btn btn-outline-danger' onclick='excluirPost($idPost,$page)'>
+                      <i class='bi bi-trash'></i>
+                  </a>
+              </div>";
+      }
+
+      echo "
+      </div>";
+    }
+
+    echo '</div>';
+    echo '</section>';
+  } else {
+    echo "<p class='text-center'>Nenhum post encontrado.</p>";
+  }
+  ?>
+
 
   <div class="modal fade" id="modalSanta" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="labelHeader" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modalBlog">
@@ -175,6 +239,10 @@ $page = 1;
               <input type="text" id="citacoesPost" class="form-control" placeholder="Citações">
             </div>
             <div class="col-md-12">
+              <label for="descricao" class="form-label">Descricao:</label>
+              <textarea id="descricaoPost" class="form-control" placeholder="Descrição"></textarea>
+            </div>
+            <div class="col-md-12">
               <label class="form-label">Adicionar Imagem: <span class="text-danger">*</span></label>
               <div class="input-group">
                 <input type="file" class="form-control" id="imagemPost" accept="image/*" placeholder="Clique para adicionar uma imagem">
@@ -184,17 +252,11 @@ $page = 1;
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
-          <button type="button" class="btn btn-dark" data-bs-dismiss="modal" onclick="salvarPost()">Salvar</button>
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal" onclick="salvarPost(<?php echo $page ?>)">Salvar</button>
         </div>
       </div>
     </div>
   </div>
-
-
-
-
-
-
 
   <div class="text-center footer">
     <div class="footer-top">
@@ -241,9 +303,6 @@ $page = 1;
     </a>';
           }
           ?>
-
-
-
 
         </section>
         <footer class="footerInfo">
@@ -309,5 +368,6 @@ $page = 1;
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
 
+</body>
 
 </html>
