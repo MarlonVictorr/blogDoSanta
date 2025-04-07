@@ -11,28 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   backToTopButton.addEventListener("click", function (e) {
     e.preventDefault();
-
-    const scrollToTop = () => {
-      const c = document.documentElement.scrollTop || document.body.scrollTop;
-      if (c > 0) {
-        window.requestAnimationFrame(scrollToTop);
-        window.scrollTo(0, c - c / 8);
-      }
-    };
-
-    scrollToTop();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
-
-function scrollToPosts() {
-  const section = document.getElementById("postsSection");
-  if (section) {
-    window.scrollTo({
-      top: section.offsetTop - 50, // Ajuste para garantir que fique visível
-      behavior: "smooth",
-    });
-  }
-}
 
 function logar() {
   let usuario = document.getElementById("UsuarioInput").value;

@@ -4,13 +4,19 @@ body {
   margin: 0;
 }
 
-main {
-  flex: 1 0 auto;
-}
-
 .footer {
   flex-shrink: 0;
   width: 100%;
+}
+
+.container-body {
+  min-height: 100vh; /* Faz o conteúdo ocupar toda a altura da tela */
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1; /* Faz com que o conteúdo ocupe o espaço disponível */
 }
 
 .footerInfo {
@@ -21,89 +27,10 @@ main {
     rgba(238, 255, 1) 70%,
     rgb(253, 253, 253) 100%
   );
-  padding: 10px;
 }
 
-@media screen and (max-width: 768px) {
-  #carouselExampleControls a {
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-  }
-
-  .navbar {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 15px;
-    padding: 0px;
-    align-items: center;
-    padding: 10px;
-    width: 100%;
-    position: relative;
-    left: 230px;
-  }
-
-  .logo li {
-    margin: 5px 2;
-  }
-
-  .navbar-brand img {
-    width: 150px;
-  }
-
-  .navbar a {
-    padding: 5px 15px;
-  }
-
-  .col-md-10.offset-md-2 {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .footerInfo .row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footerInfo .offset-md-4 {
-    margin-left: 0;
-  }
-
-  .col-md-6 {
-    padding: 10px 15px;
-  }
-
-  #container {
-    display: block;
-  }
-
-  .footerInfo .offset-md-4,
-  .footerInfo .offset-inner {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .footerInfo .row > div {
-    padding: 15px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .footer .footer-top .container section {
-    display: flex;
-
-    gap: 10px;
-  }
-
-  .footer .footer-top .container section a {
-    margin: 20px 5px;
-  }
+.footerInfo .text-center p {
+  margin: 0;
 }
 
 #header {
@@ -119,12 +46,7 @@ main {
 }
 
 .navbar-brand img {
-  width: 200px;
-}
-
-.navbar {
-  padding: 10px;
-  margin-left: 10px;
+  width: 250px;
 }
 
 .navbar ul {
@@ -133,10 +55,11 @@ main {
   display: flex;
   list-style: none;
   align-items: center;
+  font-size: 15px;
 }
 
 .logo li {
-  position: relative;
+  left: auto;
 }
 
 .navbar a,
@@ -150,6 +73,15 @@ main {
   color: #070707;
   white-space: nowrap;
   transition: 0.3s;
+}
+
+.DivPost {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+  height: 300px;
 }
 
 .navbar a {
@@ -175,7 +107,7 @@ main {
 }
 
 .logo {
-  margin-right: 500px;
+  margin-right: 400px;
 }
 
 .back-to-top {
@@ -262,7 +194,7 @@ body.custom-font {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  z-index: 1000;
+  z-index: 1500;
   height: 300px;
 }
 
@@ -318,13 +250,6 @@ p a {
   gap: 2rem;
 }
 
-@media (min-width: 768px) {
-  .post-slide {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
 .post-details {
   flex: 1;
   padding: 1rem;
@@ -349,22 +274,6 @@ p a {
 .post-excerpt {
   color: #666;
   margin-bottom: 1.5rem;
-}
-
-.read-more {
-  display: inline-block;
-  background: rgb(183, 202, 6);
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.read-more:hover {
-  background: rgb(163, 182, 0);
-  color: white;
-  text-decoration: none;
 }
 
 .carousel-control-prev,
@@ -395,10 +304,6 @@ p a {
   padding: 15px;
   border-bottom: none;
   border-radius: 15px 15px 0 0;
-}
-
-.modalBlog .modal-header .modal-title {
-  font-size: 1.5rem;
 }
 
 .modalBlog .modal-body {
@@ -477,4 +382,104 @@ p a {
 .post-actions .btn {
   padding: 8px 12px;
   font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  #carouselExampleControls a {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    left: 200%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  .logo {
+    margin-right: 500px;
+  }
+
+  .navbar-brand img {
+    width: 250px;
+    position: relative;
+    left: 15px;
+  }
+
+  .navbar a {
+    padding: 5px 15px;
+  }
+
+  .footerInfo .row {
+    flex-direction: column;
+    text-align: center;
+    position: static;
+  }
+
+  .footerInfo .offset-md-4 {
+    margin-left: 0;
+  }
+
+  .col-md-6 {
+    padding: 10px 15px;
+  }
+
+  #container {
+    display: block;
+  }
+
+  .footerInfo .offset-md-4,
+  .footerInfo .offset-inner {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .footerInfo .row > div {
+    padding: 15px;
+  }
+
+  .menuAcessibilidade {
+    position: fixed;
+    bottom: 80px;
+    right: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 1400;
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer .footer-top .container section {
+    display: flex;
+    gap: 10px;
+  }
+
+  .footer .footer-top .container section a {
+    margin: 20px 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .post-slide {
+    flex-direction: row;
+    align-items: center;
+  }
 }
