@@ -1,5 +1,5 @@
 
-![image](https://github.com/user-attachments/assets/c3ad77c9-a130-4b90-8ed8-af7529b7845f) blogDoSanta
+Blog Do Santa
 
 Este projeto foi desenvolvido com o objetivo de criar uma página web moderna, responsiva e funcional.
 
@@ -51,6 +51,7 @@ Alterar a fonte para uma tipografia mais acessível
 Esses recursos garantem uma navegação mais inclusiva para todos os usuários.
 
 🔧 Como Rodar o Projeto
+
 Clone o repositório:
 git clone https://github.com/seu-usuario/seu-repositorio.git
 
