@@ -15,10 +15,10 @@ Projeto desenvolvido para criação de uma página web moderna, responsiva e fun
 
 O projeto conta com:
 
-* Estruturação semântica utilizando HTML5.
+* Estruturação semântica utilizando HTML.
 * Design responsivo para diferentes dispositivos (mobile, tablet e desktop).
 * Scripts JavaScript para melhorias na experiência do usuário.
-* Estilização otimizada utilizando CSS3 e classes utilitárias do Bootstrap.
+* Estilização otimizada utilizando CSS e classes utilitárias do Bootstrap.
 * Integração com servidor via PHP.
 * Persistência de dados utilizando banco de dados MySQL.
 
