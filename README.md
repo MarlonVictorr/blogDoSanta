@@ -5,10 +5,10 @@ Projeto desenvolvido para criação de uma página web moderna, responsiva e fun
 # 🛠️ Construído com
 
 * PHP - Back-end
-* HTML5 - Estruturação de conteúdo
-* CSS3 - Estilização e responsividade
+* HTML - Estruturação de conteúdo
+* CSS - Estilização e responsividade
 * JavaScript - Interatividade no front-end
-* Bootstrap 5 - Framework front-end responsivo
+* Bootstrap - Framework front-end responsivo
 * MySQL - Banco de dados relacional
 
 # 📚 Sobre o Projeto
