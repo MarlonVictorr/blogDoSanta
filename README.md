@@ -1,4 +1,5 @@
-blogDoSanta
+
+![image](https://github.com/user-attachments/assets/c3ad77c9-a130-4b90-8ed8-af7529b7845f) blogDoSanta
 
 Este projeto foi desenvolvido com o objetivo de criar uma página web moderna, responsiva e funcional.
 
