@@ -196,11 +196,15 @@ $page = 1;
         echo '</div>';
         echo '</section>';
       } else {
-        echo "<div class='DivPost'>
-                        <p class='text-center'>Nenhum post encontrado.</p>
-                </div>";
+        echo "<div class='container DivPost'>
+        
+        <p class='text-center'>Nenhum post encontrado.</p>
+      
+        </div>";
       }
       ?>
+
+
 
 
       <div class="modal fade" id="modalSanta" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="labelHeader" aria-hidden="true">

@@ -189,9 +189,11 @@ $page = 3;
                 echo '</div>';
                 echo '</section>';
             } else {
-                echo "<div class='DivPost'>
-                        <p class='text-center'>Nenhum post encontrado.</p>
-                </div>";
+                echo "<div class='container DivPost'>
+        
+        <p class='text-center'>Nenhum post encontrado.</p>
+      
+        </div>";
             }
             ?>
 
